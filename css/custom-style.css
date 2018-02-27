@@ -15,6 +15,18 @@ h2 {
 	width:100%;
 }
 .custom-header .material-icons{color:#484848 !important;}
+@media (max-width:768px){
+	._formobile{
+		height: 220px;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		width: auto;
+		display: flex;
+	}
+	._mobilecard{
+		display: inline-table;
+	}
+}
 .primary-header .header-content {
 	width:100%;
 	font-size:48px;
