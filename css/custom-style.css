@@ -9,9 +9,6 @@ h2 {
 }
 .banner-wrapper{position:relative; height:400px;}
 .search-wrapper{
-	/*position:absolute;
-	left:0;
-	top:0;*/
 	width:100%;
 }
 .custom-header .material-icons{color:#484848 !important;}
@@ -27,8 +24,8 @@ h2 {
 		display: flex;
 	}
 	._mobilecard{
-		/*display: inline-flex;
-		width:270px;*/
+		/*display: inline-flex;*/
+		width:270px;
 		margin-right:8px;
 	}
 }
