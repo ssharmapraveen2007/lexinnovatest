@@ -17,7 +17,7 @@ h2 {
 		padding:0 !important;
 	}
 	._formobile{
-		height: 140px;
+		/*height: 140px;*/
 		overflow-y: hidden;
 		overflow-x: scroll;
 		width: auto;
@@ -25,7 +25,7 @@ h2 {
 	}
 	._mobilecard{
 		/*display: inline-flex;*/
-		width:270px;
+		width:270px !important;
 		margin-right:8px;
 	}
 }
