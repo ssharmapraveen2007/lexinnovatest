@@ -15,72 +15,26 @@
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel = "stylesheet" href="css/custom-style.css" />
     <script src = "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/background.cycle.min.js"></script>
 	<script>
-		/*function GetRandomBackground()
-		  {
-			  alert('hi');
-			var url = 'https://source.unsplash.com/random/1600x600';
+        $(document).ready(function() {
+            $("#selector").backgroundCycle({
+                imageUrls: [
+                    'https://source.unsplash.com/random/1600x600?index=1',
+                    'https://source.unsplash.com/random/1600x600?index=2',
+                    'https://source.unsplash.com/random/1600x600?index=3',
+                    'https://source.unsplash.com/random/1600x600?index=4',
+                    'https://source.unsplash.com/random/1600x600?index=5',
+                    'https://source.unsplash.com/random/1600x600?index=6'
+                ],
+                fadeSpeed: 2000,
+                duration: 5000,
+                backgroundSize: SCALING_MODE_COVER
+            });
+        });
+    </script>
 
-  $.ajax({
-	  
-    url: document.location.protocol + 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-    async: false,
-    jsonpCallback: 'jsonCallback',
-    contentType: "application/json",
-    dataType: 'jsonp',
-    success: function(json) {
-      alert();
-      var min = 0;
-      var max = json.responseData.feed.entries.length;
-      // and the formula is:
-      var random = Math.floor(Math.random() * (max - min + 1)) + min;
-
-      var str = json.responseData.feed.entries[random].content;
-
-      var regex = /<img.*?src="(.*?)"/;
-      var src = regex.exec(str)[1];
-
-      $('#selector').css('background-image','url('+src+')');
-      
-    }
-  });
-		  }
-		  GetRandomBackground();*/
-		  $(document).ready(function(){
-      
-   /* var numberOfImages=3;
-      
-    var imageNum = Math.round(Math.random()*(numberOfImages-1))+1;
-      
-    var imgPath=('https://source.unsplash.com/random/1600x600');*/
-	
-	// control the auto refresh rate -> 1000 = 1 second
-		//var refreshRate = 10000; // 10 seconds
-		
-		
-		// Automatically reload the browser
-		//setInterval(function() {
-			//$('#selector').load(window.location.href + '#selector')
-		   //window.location.reload();
-		//}, refreshRate);
-		function doRefresh(){
-		// Hide the images on load
-		//$('#selector').hide();
-		
-		// Get a random image from Unsplash and fade it in on load
-		$('#selector').css({
-		  // serves a random image from this collection on Unsplash.com
-		  'background-image' : 'url(https://source.unsplash.com/collection/495468/1600x900)'
-		}).fadeIn(3500);
-		}
-		$(function() {
-			setInterval(doRefresh, 5000);
-		});
-    //$('body').css('background-image', ('url("'+imgPath+'")')).css('background-repeat', 'no-repeat');
-      
-    });
-	</script>
 </head>
 
 <body>
@@ -125,9 +79,9 @@
        <main class = "mdl-layout__content">
           <div id="selector" class = "page-content banner-wrapper">
           	<div class="banner-img">
-            	<img src="https://source.unsplash.com/random/1600x600" />
+            	<!--<img src="https://source.unsplash.com/random/1600x600" />-->
             </div>
-            <div class="search-wrapper primary-header ">
+            <div class="search-wrapper primary-header">
             	<section class="header-content">
                     <h1 title="Book unique homes and experiences all over the world.">
                     	Book unique homes and experiences all over the world.
