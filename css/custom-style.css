@@ -16,15 +16,20 @@ h2 {
 }
 .custom-header .material-icons{color:#484848 !important;}
 @media (max-width:768px){
+	.container{
+		padding:0 !important;
+	}
 	._formobile{
-		height: 220px;
+		height: 140px;
 		overflow-y: hidden;
 		overflow-x: scroll;
 		width: auto;
 		display: flex;
 	}
 	._mobilecard{
-		display: inline-table;
+		/*display: inline-flex;
+		width:270px;*/
+		margin-right:8px;
 	}
 }
 .primary-header .header-content {
